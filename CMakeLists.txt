@@ -32,4 +32,5 @@ list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
 
 add_library(closest_link_attacher SHARED src/closest_link_attacher.cpp)
 target_link_libraries(closest_link_attacher ${GAZEBO_LIBRARIES})
+add_dependencies(closest_link_attacher ${closest_link_attacher_EXPORTED_TARGETS})
 
